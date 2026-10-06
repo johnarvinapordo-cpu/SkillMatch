@@ -1,0 +1,44 @@
+### Health
+GET http://localhost:5000/api/health
+
+### Login - demo student
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "juan@skillmatch.test",
+  "password": "demo123"
+}
+
+### Login - admin
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@skillmatch.test",
+  "password": "demo123"
+}
+
+### Get skills
+GET http://localhost:5000/api/skills
+Authorization: Bearer YOUR_TOKEN
+
+### My profile
+GET http://localhost:5000/api/auth/me
+Authorization: Bearer YOUR_TOKEN
+
+### My skills
+GET http://localhost:5000/api/skills/me
+Authorization: Bearer YOUR_TOKEN
+
+### Projects
+GET http://localhost:5000/api/projects
+Authorization: Bearer YOUR_TOKEN
+
+### Demo project matches
+GET http://localhost:5000/api/matching/projects/1
+Authorization: Bearer YOUR_TOKEN
+
+### Search students
+GET http://localhost:5000/api/matching/students?skill=React
+Authorization: Bearer YOUR_TOKEN
